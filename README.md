@@ -13,6 +13,7 @@ Is a simple and not finished project for the Matrix protocol to interact.
 - logout and lougou from all device
 - see all joind rooms
 - get all events
+- api answer pipe in a file like > sh
 
 ## not finished now
 - react and export to message

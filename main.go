@@ -274,6 +274,17 @@ func main() {
 			http_code = "Command not found: 404"
 			outc = "I don't know: " + text
 		}
+		if strings.Contains(text, ">") {
+			ts := text[strings.Index(text, ">")+1:]
+			if ts != "" {
+				os.Create(ts)
+				os.WriteFile(ts, []byte(outc), 0111)
+			} else {
+				http_code = "400"
+				outc = "need a file name"
+			}
+		}
+
 		fmt.Println(http_code)
 		fmt.Println(outc)
 	}
